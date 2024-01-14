@@ -8,11 +8,15 @@ license = "MIT"
 
 [dependencies]
 # TODO: perhaps use polars?
-argminmax = { version = "0.6.1", features = ["half"] }
+argminmax = { version = "0.6.1", default-features = false, features = ["float"] }
 # argminmax = { path = "../../argminmax" , features = ["half", "ndarray"] }
 half = { version = "2.1", default-features = false , features=["num-traits"], optional = true}
 num-traits = { version = "0.2.15", default-features = false }
 rayon = { version = "1.6.0", default-features = false }
+
+[features]
+nightly_simd = ["argminmax/nightly_simd"]
+half = ["argminmax/half"]
 
 [dev-dependencies]
 rstest = { version = "0.18.1", default-features = false }
