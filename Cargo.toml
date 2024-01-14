@@ -8,7 +8,7 @@ repository = "https://github.com/predict-idlab/tsdownsample"
 license = "MIT"
 
 [dependencies]
-downsample_rs = { path = "downsample_rs", features = ["half"]}
+downsample_rs = { path = "downsample_rs", features = ["half", "nightly_simd"]}
 pyo3 = { version = "0.19", features = ["extension-module"] }
 numpy = { version = "0.19", features = ["half"] }
 half = { version = "2.1", default-features = false }
