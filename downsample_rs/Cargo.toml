@@ -16,7 +16,7 @@ rayon = { version = "1.6.0", default-features = false }
 
 [features]
 nightly_simd = ["argminmax/nightly_simd"]
-half = ["argminmax/half"]
+half = ["argminmax/half", "dep:half"]
 
 [dev-dependencies]
 rstest = { version = "0.18.1", default-features = false }
